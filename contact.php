@@ -45,9 +45,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if (empty($form_errors) && !$form_submitted) {
-    // In production, you'd send an email or save to DB here.
-    // For now, we just celebrate.
-    $form_submitted = true;
+    $to = 'hello@retrogate.app';
+    $subject_prefix = match($form_data['subject']) {
+      'bug'     => '[Bug]',
+      'feature' => '[Feature]',
+      'help'    => '[Help]',
+      'love'    => '[Fan Mail]',
+      'vintage' => '[Vintage Story]',
+      default   => '[Contact]',
+    };
+    $mail_subject = "$subject_prefix Message from {$form_data['name']}";
+
+    $body = "Name: {$form_data['name']}\n";
+    $body .= "Email: {$form_data['email']}\n";
+    $body .= "Vintage Machine: " . ($form_data['vintage_machine'] ?: 'Not specified') . "\n";
+    $body .= "Favorite OS: " . ($form_data['favorite_os'] ?: 'Not specified') . "\n";
+    $body .= "Subject: " . ($form_data['subject'] ?: 'Not specified') . "\n";
+    $body .= "\n---\n\n";
+    $body .= $form_data['message'];
+
+    $headers = "From: noreply@retrogate.app\r\n";
+    $headers .= "Reply-To: {$form_data['email']}\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers .= "X-Mailer: RetroGate-Website/1.0";
+
+    $form_submitted = mail($to, $mail_subject, $body, $headers);
+
+    if (!$form_submitted) {
+      $form_errors[] = 'Failed to send message. Please try again or email us directly at hello@retrogate.app.';
+    }
   }
 }
 
