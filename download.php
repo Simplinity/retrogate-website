@@ -19,18 +19,21 @@ require_once __DIR__ . '/includes/header.php';
   <!-- Main Download -->
   <div style="background: var(--white); border: 3px solid var(--amber); padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
     <div style="margin-bottom: 1rem;"><img src="/assets/img/appicon-128.png" alt="RetroGate" width="128" height="128"></div>
-    <h2 style="margin-bottom: 0.5rem;">RetroGate for macOS</h2>
-    <p style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 0.5rem;">
-      Version 1.0 &mdash; <?= date('F Y') ?>
+    <h2 style="margin-bottom: 0.5rem;">RetroGate v1.0.0</h2>
+    <p style="font-family: var(--font-display); font-style: italic; color: var(--brown-light); margin-bottom: 0.5rem;">
+      Browse the modern web on vintage Macs
     </p>
     <p style="color: #666; margin-bottom: 2rem;">
-      Requires macOS 14+ (Sonoma) on Apple Silicon. Swift 5.9+.<br>
-      Approximately 8 MB. Contains zero JavaScript frameworks.
+      macOS 14+ (Sonoma) &mdash; Apple Silicon<br>
+      <code>RetroGate-1.0.0.dmg</code> &mdash; 6.5 MB &mdash; drag-to-Applications
     </p>
 
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="https://github.com/Simplinity/retrogate/releases" class="btn btn-primary" target="_blank">
-        &#x2B07; Download from GitHub
+      <a href="https://github.com/Simplinity/retrogate/releases/download/v1.0.0/RetroGate-1.0.0.dmg" class="btn btn-primary">
+        &#x2B07; Download DMG
+      </a>
+      <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.0.0" class="btn btn-on-light" target="_blank">
+        Release Notes
       </a>
     </div>
 
@@ -41,7 +44,7 @@ require_once __DIR__ . '/includes/header.php';
 
   <!-- System Requirements -->
   <div style="background: var(--cream); border: 3px solid var(--beige-dark); padding: 2rem; margin-bottom: 2rem;">
-    <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">&#x1F4CB; System Requirements</h3>
+    <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">System Requirements</h3>
 
     <table class="retro-table" style="font-size: 0.9rem;">
       <tbody>
@@ -59,15 +62,11 @@ require_once __DIR__ . '/includes/header.php';
         </tr>
         <tr>
           <td style="font-weight: bold;">Disk Space</td>
-          <td>~8 MB + cache for Wayback responses</td>
+          <td>6.5 MB + cache for Wayback responses</td>
         </tr>
         <tr>
           <td style="font-weight: bold;">Network</td>
           <td>Vintage Mac on same LAN (or SheepShaver at 10.0.2.2)</td>
-        </tr>
-        <tr>
-          <td style="font-weight: bold;">Swift</td>
-          <td>5.9+ (included with Xcode 15+)</td>
         </tr>
         <tr>
           <td style="font-weight: bold;">Patience</td>
@@ -83,7 +82,7 @@ require_once __DIR__ . '/includes/header.php';
 
   <!-- Build from Source -->
   <div style="background: var(--white); border: 3px solid var(--beige-dark); padding: 2rem; margin-bottom: 2rem;">
-    <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">&#x1F528; Build From Source</h3>
+    <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">Build From Source</h3>
 
     <p>For developers who like to see what&rsquo;s under the hood (spoiler: it&rsquo;s SwiftNIO all the way down):</p>
 
@@ -97,6 +96,7 @@ swift run RetroGate</pre>
     <pre>open Package.swift</pre>
 
     <p style="margin-top: 1rem; font-size: 0.85rem; color: #888;">
+      Requires Swift 5.9+ (included with Xcode 15+).
       The project has 50 tests across 9 suites. Run them with <code>swift test</code>.
       They all pass. We&rsquo;re very proud of this.
     </p>
@@ -104,7 +104,7 @@ swift run RetroGate</pre>
 
   <!-- Architecture Overview -->
   <div style="background: var(--charcoal); border: 3px solid var(--brown); padding: 2rem; margin-bottom: 2rem; color: var(--beige);">
-    <h3 style="font-family: var(--font-pixel); color: var(--amber-glow); margin-bottom: 1rem;">&#x1F4C1; Architecture</h3>
+    <h3 style="font-family: var(--font-pixel); color: var(--amber-glow); margin-bottom: 1rem;">Architecture</h3>
 
     <pre style="border: none; margin: 0; padding: 0; background: transparent; box-shadow: none;">
 Sources/
@@ -120,7 +120,6 @@ Sources/
 
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
     <div style="background: var(--white); border: 3px solid var(--beige-dark); padding: 1.5rem; text-align: center;">
-      <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#x1F4D6;</div>
       <h3 style="font-family: var(--font-pixel); font-size: 1.1rem; color: var(--amber-dark); margin-bottom: 0.5rem;">User Manual</h3>
       <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
         The complete guide. Setup, configuration, Wayback mode, troubleshooting, and existential questions about beige plastic.
@@ -131,7 +130,6 @@ Sources/
     </div>
 
     <div style="background: var(--white); border: 3px solid var(--beige-dark); padding: 1.5rem; text-align: center;">
-      <div style="font-size: 2rem; margin-bottom: 0.5rem;">&#x1F4D0;</div>
       <h3 style="font-family: var(--font-pixel); font-size: 1.1rem; color: var(--amber-dark); margin-bottom: 0.5rem;">Architecture Docs</h3>
       <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
         Technical deep-dive. Module overview, request flow, design decisions, and why HTTP/1.0 responses only.
@@ -142,10 +140,10 @@ Sources/
 
   <!-- Quick Start -->
   <div style="background: var(--cream); border: 3px solid var(--beige-dark); padding: 2rem; margin-bottom: 2rem;">
-    <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">&#x26A1; Quick Start (90 Seconds)</h3>
+    <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">Quick Start (90 Seconds)</h3>
     <ol style="padding-left: 1.5rem; line-height: 2;">
-      <li>Download and launch RetroGate on your modern Mac</li>
-      <li>Note the proxy address (e.g., <code>192.168.0.130:8080</code>)</li>
+      <li>Download <code>RetroGate-1.0.0.dmg</code>, open it, drag to Applications</li>
+      <li>Launch RetroGate &mdash; note the proxy address (e.g., <code>192.168.0.130:8080</code>)</li>
       <li>On your vintage Mac, set HTTP proxy to that address</li>
       <li>Browse. Marvel. Tell your Quadra it&rsquo;s not obsolete after all.</li>
     </ol>
@@ -158,7 +156,7 @@ Sources/
   <!-- Fun footer note -->
   <div style="text-align: center; margin: 3rem 0; padding: 2rem; border: 2px dashed var(--beige-dark);">
     <p style="font-family: var(--font-pixel); color: var(--amber-dark); font-size: 1.1rem;">
-      &#x1F4BE; Fun fact: This entire download page weighs less than a single
+      Fun fact: This entire download page weighs less than a single
       modern cookie consent banner.
     </p>
     <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">
