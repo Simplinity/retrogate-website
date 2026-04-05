@@ -30,16 +30,16 @@ require_once __DIR__ . '/includes/header.php';
          ___________________________________
         |   _____________________________   |
         |  |                             |  |
-        |  |    $ curl -x retrogate      |  |
-        |  |      http://apple.com       |  |
+        |  |  Netscape: apple.com        |  |
+        |  |  ________________________   |  |
         |  |                             |  |
-        |  |    200 OK  (HTML 3.2)       |  |
-        |  |    Size: 12KB (was 4.7MB)   |  |
-        |  |    Images: 23 transcoded    |  |
-        |  |    Time: 0.8s              |  |
+        |  |  Welcome to Apple.com       |  |
+        |  |  4.7MB -> 12KB (HTML 3.2)   |  |
+        |  |  23 images transcoded       |  |
         |  |                             |  |
-        |  |    Your Quadra 605 says:    |  |
-        |  |    "Finally."              |  |
+        |  |  "Think different."         |  |
+        |  |   -- a Quadra 605, 2026     |  |
+        |  |                             |  |
         |  |_____________________________|  |
         |  _  _ _ _ _ _ _ _ _ _ _ _ _ _  _  |
         | |_||_|_|_|_|_|_|_|_|_|_|_|_||_|| |
