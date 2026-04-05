@@ -8,6 +8,10 @@ $page_description = 'RetroGate is a macOS proxy server that lets vintage Macs an
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RetroGate","description":"A macOS proxy server that lets vintage Macs and PCs browse the modern web. TLS bridging, HTML5 to HTML 3.2 transcoding, image conversion, and Wayback Machine time travel.","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 14+","url":"https://retrogate.app","downloadUrl":"https://github.com/Simplinity/retrogate/releases/download/v1.0.0/RetroGate-1.0.0.dmg","softwareVersion":"1.0.0","fileSize":"6.5MB","license":"https://www.gnu.org/licenses/gpl-3.0.html","isAccessibleForFree":true,"author":{"@type":"Person","name":"Bruno van Branden","url":"https://github.com/Simplinity"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+
 <!-- ====== HERO ====== -->
 <section class="hero">
   <div class="hero-content">

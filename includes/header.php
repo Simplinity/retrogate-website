@@ -8,6 +8,8 @@ $site_title = $page_title ?? 'RetroGate';
 $full_title = ($page_title ?? false) ? "$page_title — RetroGate" : 'RetroGate — Browse the Modern Web on Vintage Macs';
 $meta_description = $page_description ?? 'RetroGate is a macOS proxy server that bridges the gap between classic Macintosh computers (1984–2005) and today\'s internet. Time travel for your beige plastic friends.';
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
+$canonical_path = ($current_page === 'index') ? '/' : '/' . $current_page . '.php';
+$canonical_url = 'https://retrogate.app' . $canonical_path;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,14 +17,23 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="<?= htmlspecialchars($meta_description) ?>">
-  <meta name="keywords" content="RetroGate, vintage Mac, classic Macintosh, retro computing, proxy server, Wayback Machine, HTML 3.2, Mac OS 9, System 7, Netscape Navigator">
-  <meta name="author" content="RetroGate">
+  <meta name="keywords" content="RetroGate, vintage Mac, classic Macintosh, retro computing, proxy server, Wayback Machine, HTML 3.2, Mac OS 9, System 7, Netscape Navigator, old Mac internet, SheepShaver, iCab, Netscape Navigator, classic Mac OS">
+  <meta name="author" content="Bruno van Branden">
+  <link rel="canonical" href="<?= $canonical_url ?>">
 
   <!-- Open Graph -->
   <meta property="og:title" content="<?= htmlspecialchars($full_title) ?>">
   <meta property="og:description" content="<?= htmlspecialchars($meta_description) ?>">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://retrogate.app">
+  <meta property="og:url" content="<?= $canonical_url ?>">
+  <meta property="og:image" content="https://retrogate.app/assets/img/appicon-256.png">
+  <meta property="og:site_name" content="RetroGate">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<?= htmlspecialchars($full_title) ?>">
+  <meta name="twitter:description" content="<?= htmlspecialchars($meta_description) ?>">
+  <meta name="twitter:image" content="https://retrogate.app/assets/img/appicon-256.png">
 
   <title><?= htmlspecialchars($full_title) ?></title>
 
