@@ -11,7 +11,6 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ====== HERO ====== -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">&#x1F4E1; NOW SERVING HTTP/1.0 SINCE 2025</div>
 
     <h1>Retro<span class="highlight">Gate</span></h1>
     <p class="hero-subtitle">Browse the modern web on vintage Macs.</p>
