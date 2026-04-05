@@ -18,7 +18,7 @@ require_once __DIR__ . '/includes/header.php';
 
   <!-- Main Download -->
   <div style="background: var(--white); border: 3px solid var(--amber); padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
-    <div style="font-size: 4rem; margin-bottom: 1rem;">&#x1F4E1;</div>
+    <div style="margin-bottom: 1rem;"><img src="/assets/img/appicon-128.png" alt="RetroGate" width="128" height="128"></div>
     <h2 style="margin-bottom: 0.5rem;">RetroGate for macOS</h2>
     <p style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 0.5rem;">
       Version 1.0 &mdash; <?= date('F Y') ?>

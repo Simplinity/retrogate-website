@@ -27,7 +27,8 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
   <title><?= htmlspecialchars($full_title) ?></title>
 
   <!-- Favicon: a tiny amber antenna -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
 
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
