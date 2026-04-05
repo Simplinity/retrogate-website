@@ -14,9 +14,6 @@ require_once __DIR__ . '/includes/header.php';
   <p class="subtitle">Everything you wanted to know but were too afraid to ask your Quadra.</p>
 </section>
 
-<div class="breadcrumb">
-  <a href="/">Home</a> &#x2192; FAQ
-</div>
 
 <div class="faq-content">
 

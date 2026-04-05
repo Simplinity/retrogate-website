@@ -15,9 +15,6 @@ require_once __DIR__ . '/includes/header.php';
   <p class="subtitle">A Portal Through Time for Your Beige Plastic Friends</p>
 </section>
 
-<div class="breadcrumb">
-  <a href="/">Home</a> &#x2192; Manual
-</div>
 
 <!-- Download Bar -->
 <div class="manual-content">

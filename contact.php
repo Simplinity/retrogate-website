@@ -59,9 +59,6 @@ require_once __DIR__ . '/includes/header.php';
   <p class="subtitle">Bug reports, feature requests, and love letters from vintage Macs.</p>
 </section>
 
-<div class="breadcrumb">
-  <a href="/">Home</a> &#x2192; Contact
-</div>
 
 <div class="contact-content">
 

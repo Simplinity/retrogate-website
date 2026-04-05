@@ -13,9 +13,6 @@ require_once __DIR__ . '/includes/header.php';
   <p class="subtitle">Free. Open Source. GPLv3 Licensed. Because vintage Macs deserve nice things.</p>
 </section>
 
-<div class="breadcrumb">
-  <a href="/">Home</a> &#x2192; Download
-</div>
 
 <div class="faq-content" style="max-width: 750px;">
 
