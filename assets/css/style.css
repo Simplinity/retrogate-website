@@ -445,8 +445,9 @@ pre:not(.ascii-computer)::before {
 
 /* --- ASCII Art Computer --- */
 .ascii-computer {
-  font-family: var(--font-pixel);
-  font-size: clamp(0.5rem, 1.2vw, 0.85rem);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: clamp(0.45rem, 1.1vw, 0.75rem);
   color: var(--beige);
   line-height: 1.15;
   white-space: pre;
