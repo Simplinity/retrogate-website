@@ -208,6 +208,7 @@ pre:not(.ascii-computer)::before {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .nav-logo:hover {
@@ -234,8 +235,8 @@ pre:not(.ascii-computer)::before {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.7; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.1); }
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
 }
 
 .nav-links {

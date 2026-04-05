@@ -42,7 +42,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
 <nav class="site-nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo">
-      <span class="logo-icon"></span>
       RETROGATE
     </a>
 
