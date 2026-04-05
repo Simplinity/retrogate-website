@@ -895,12 +895,12 @@ table.retro-table tbody tr:hover {
 
 .visitor-counter {
   font-family: var(--font-pixel);
-  background: var(--black);
-  border: 2px inset #555;
+  background: var(--charcoal);
+  border: 2px solid var(--amber-dark);
   padding: 0.3rem 1rem;
-  color: var(--green-crt);
+  color: var(--amber-glow);
   font-size: 0.9rem;
-  text-shadow: 0 0 5px rgba(51, 255, 51, 0.5);
+  letter-spacing: 2px;
 }
 
 /* --- Manual Page --- */

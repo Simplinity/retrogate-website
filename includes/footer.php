@@ -30,8 +30,19 @@
 
     <div class="footer-bottom">
       <p>&copy; <?= date('Y') ?> Bruno van Branden (Simplinity) &mdash; MIT License</p>
+      <?php
+        $counter_file = __DIR__ . '/../data/counter.txt';
+        $counter_dir = dirname($counter_file);
+        if (!is_dir($counter_dir)) { @mkdir($counter_dir, 0755, true); }
+        $count = 0;
+        if (file_exists($counter_file)) {
+            $count = (int) file_get_contents($counter_file);
+        }
+        $count++;
+        @file_put_contents($counter_file, $count);
+      ?>
       <div class="visitor-counter">
-        VISITORS: <?= str_pad(rand(13337, 99999), 5, '0', STR_PAD_LEFT) ?>
+        VISITORS: <?= str_pad($count, 6, '0', STR_PAD_LEFT) ?>
       </div>
     </div>
   </div>
