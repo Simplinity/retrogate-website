@@ -679,8 +679,8 @@ table.retro-table tbody tr:hover {
   color: var(--amber);
   opacity: 0.3;
   position: absolute;
-  top: -10px;
-  left: 10px;
+  top: 8px;
+  left: 15px;
   line-height: 1;
 }
 
