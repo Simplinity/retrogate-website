@@ -37,7 +37,7 @@ require_once __DIR__ . '/includes/header.php';
       </a>
     </div>
 
-    <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #999; font-family: var(--font-pixel); text-align: center;">
+    <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #999; font-family: var(--font-pixel); text-align: center; max-width: 100%;">
       Or build from source: <code style="background: var(--beige); padding: 0.2rem 0.5rem;">swift build &amp;&amp; swift run RetroGate</code>
     </p>
   </div>
