@@ -23,7 +23,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <div class="hero-cta-group">
       <a href="/download.php" class="btn btn-primary">&#x2B07; Download</a>
-      <a href="/manual.php" class="btn btn-secondary">&#x1F4D6; Read the Manual</a>
+      <a href="/manual.php" class="btn btn-secondary">&#x2192; Read the Manual</a>
     </div>
 
     <pre class="ascii-computer">
