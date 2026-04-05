@@ -62,7 +62,7 @@ require_once __DIR__ . '/includes/header.php';
 
   <div class="feature-grid">
     <div class="feature-card">
-      <span class="feature-icon">&#x1F512;</span>
+      <span class="feature-icon">[~]</span>
       <h3>TLS Bridge</h3>
       <p>
         Old Macs can&rsquo;t do TLS 1.2, let alone 1.3. RetroGate fetches HTTPS sites with modern
@@ -72,7 +72,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="feature-card">
-      <span class="feature-icon">&#x1F4C4;</span>
+      <span class="feature-icon">&lt;/&gt;</span>
       <h3>HTML Transcoder</h3>
       <p>
         Converts modern HTML5/CSS3/JS pages into clean HTML 3.2 that Netscape 2, MacWeb, and iCab can
@@ -82,7 +82,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="feature-card">
-      <span class="feature-icon">&#x1F5BC;</span>
+      <span class="feature-icon">[#]</span>
       <h3>Image Transcoder</h3>
       <p>
         Converts WebP/AVIF to JPEG/GIF, resizes images to vintage-friendly dimensions, and applies
@@ -92,7 +92,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="feature-card">
-      <span class="feature-icon">&#x231B;</span>
+      <span class="feature-icon">&lt;&lt;</span>
       <h3>Wayback Machine Mode <span class="badge-new">NEW!</span></h3>
       <p>
         Set a date, and RetroGate fetches every page from the Internet Archive&rsquo;s Wayback Machine.
@@ -102,7 +102,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="feature-card">
-      <span class="feature-icon">&#x1F6E0;</span>
+      <span class="feature-icon">--&gt;</span>
       <h3>Dead Service Redirects</h3>
       <p>
         When Netscape Navigator tries to reach home.netscape.com and finds only the void,
@@ -112,7 +112,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <div class="feature-card">
-      <span class="feature-icon">&#x1F50D;</span>
+      <span class="feature-icon">&gt;_</span>
       <h3>Search Gateway</h3>
       <p>
         Point your vintage browser to <code>http://retrogate/</code> and you get a start page

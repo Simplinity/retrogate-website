@@ -524,9 +524,12 @@ pre:not(.ascii-computer)::before {
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-family: var(--font-pixel);
+  font-size: 2.2rem;
+  color: var(--amber);
   margin-bottom: 1rem;
   display: block;
+  letter-spacing: -1px;
 }
 
 .feature-card h3 {
