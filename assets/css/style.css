@@ -723,7 +723,7 @@ table.retro-table tbody tr:hover {
   margin: 0 auto;
   padding: 0 var(--gutter);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   counter-reset: step-counter;
 }
@@ -736,10 +736,11 @@ table.retro-table tbody tr:hover {
 
 .step::before {
   content: counter(step-counter);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
-  line-height: 60px;
   margin: 0 auto 1rem;
   background: var(--charcoal);
   color: var(--amber-glow);
@@ -1277,7 +1278,7 @@ table.retro-table tbody tr:hover {
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .footer-grid {
@@ -1324,9 +1325,6 @@ table.retro-table tbody tr:hover {
     gap: 1rem;
   }
 
-  .steps {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* --- Easter egg: Konami code --- */
