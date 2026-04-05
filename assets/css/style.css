@@ -471,7 +471,7 @@ pre:not(.ascii-computer)::before {
 }
 
 .features-header h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .features-header .tagline {
@@ -479,6 +479,8 @@ pre:not(.ascii-computer)::before {
   font-style: italic;
   color: var(--brown-light);
   font-size: 1.1rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .feature-grid {
