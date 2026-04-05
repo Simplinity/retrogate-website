@@ -758,7 +758,8 @@ table.retro-table tbody tr:hover {
 .step p {
   font-size: 0.9rem;
   color: #666;
-  max-width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* --- CTA Section --- */
