@@ -35,7 +35,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
 
 <!-- The marquee. Yes, we went there. -->
 <div class="retro-marquee">
-  <span>&#9733; WELCOME TO RETROGATE &#9733; Your portal to the vintage web &#9733; Now with 100% more beige &#9733; Best viewed with Netscape Navigator 3.0 at 800x600 &#9733; This site is Y2K compliant &#9733; Web 1.0 forever &#9733; Made with &lt;table&gt; layouts and zero regrets &#9733; JavaScript is just a fad &#9733; Webmaster: retrogate@retrogate.app &#9733;</span>
+  <span>&#9733; WELCOME TO RETROGATE &#9733; Your portal to the vintage web &#9733; Now with 100% more beige &#9733; Web 1.0 forever &#9733; JavaScript is just a fad &#9733; Webmaster: hello@retrogate.app &#9733;</span>
 </div>
 
 <!-- Navigation -->

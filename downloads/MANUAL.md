@@ -26,7 +26,7 @@ For the complete manual with all 16 chapters covering Getting Started, Dashboard
 
 **https://retrogate.app/manual.php**
 
-Source repository: **https://github.com/brunoscheufler/retrogate**
+Source repository: **https://github.com/Simplinity/retrogate**
 
 ---
 

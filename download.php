@@ -32,7 +32,7 @@ require_once __DIR__ . '/includes/header.php';
     </p>
 
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="https://github.com/brunoscheufler/retrogate/releases" class="btn btn-primary" target="_blank">
+      <a href="https://github.com/Simplinity/retrogate/releases" class="btn btn-primary" target="_blank">
         &#x2B07; Download from GitHub
       </a>
     </div>
@@ -90,7 +90,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <p>For developers who like to see what&rsquo;s under the hood (spoiler: it&rsquo;s SwiftNIO all the way down):</p>
 
-    <pre>git clone https://github.com/brunoscheufler/retrogate.git
+    <pre>git clone https://github.com/Simplinity/retrogate.git
 cd retrogate
 swift build
 swift run RetroGate</pre>
@@ -139,7 +139,7 @@ Sources/
       <p style="font-size: 0.85rem; color: #666; margin-bottom: 1rem;">
         Technical deep-dive. Module overview, request flow, design decisions, and why HTTP/1.0 responses only.
       </p>
-      <a href="https://github.com/brunoscheufler/retrogate/tree/main/docs" class="btn btn-on-light" style="font-size: 0.9rem; padding: 0.4rem 1rem;" target="_blank">View on GitHub</a>
+      <a href="https://github.com/Simplinity/retrogate/tree/main/docs" class="btn btn-on-light" style="font-size: 0.9rem; padding: 0.4rem 1rem;" target="_blank">View on GitHub</a>
     </div>
   </div>
 

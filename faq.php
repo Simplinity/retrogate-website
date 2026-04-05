@@ -225,7 +225,7 @@ require_once __DIR__ . '/includes/header.php';
     <button class="faq-question">Can I contribute to RetroGate?</button>
     <div class="faq-answer">
       <p>Absolutely! RetroGate is open source under the MIT license. The code is on
-        <a href="https://github.com/brunoscheufler/retrogate" target="_blank">GitHub</a>.
+        <a href="https://github.com/Simplinity/retrogate" target="_blank">GitHub</a>.
         We welcome pull requests, bug reports, feature suggestions, and strongly-worded opinions
         about whether Mac OS 8 or Mac OS 9 was better.</p>
       <p>(It was Mac OS 9. This is not up for debate. The FAQ has spoken.)</p>

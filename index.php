@@ -292,7 +292,7 @@ require_once __DIR__ . '/includes/header.php';
     </p>
     <div class="hero-cta-group">
       <a href="/download.php" class="btn btn-primary">&#x2B07; Download RetroGate</a>
-      <a href="https://github.com/brunoscheufler/retrogate" class="btn btn-secondary" target="_blank">&#x2B50; Star on GitHub</a>
+      <a href="https://github.com/Simplinity/retrogate" class="btn btn-secondary" target="_blank">&#x2B50; Star on GitHub</a>
     </div>
   </div>
 </section>

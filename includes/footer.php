@@ -20,7 +20,7 @@
       <div class="footer-links">
         <h4>Resources</h4>
         <ul>
-          <li><a href="https://github.com/brunoscheufler/retrogate" target="_blank">GitHub</a></li>
+          <li><a href="https://github.com/Simplinity/retrogate" target="_blank">GitHub</a></li>
           <li><a href="https://68kmla.org" target="_blank">68kMLA Forum</a></li>
           <li><a href="https://macintoshgarden.org" target="_blank">Macintosh Garden</a></li>
           <li><a href="https://web.archive.org" target="_blank">Wayback Machine</a></li>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; <?= date('Y') ?> RetroGate &mdash; MIT License &mdash; This site is <span style="color: var(--green-crt);">Y2K compliant</span></p>
+      <p>&copy; <?= date('Y') ?> RetroGate &mdash; MIT License</p>
       <div class="visitor-counter">
         VISITORS: <?= str_pad(rand(13337, 99999), 5, '0', STR_PAD_LEFT) ?>
       </div>

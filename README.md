@@ -1,6 +1,6 @@
 # RetroGate Website
 
-The official website for [RetroGate](https://github.com/brunoscheufler/retrogate) — a macOS proxy server that lets vintage Macs and PCs browse the modern web.
+The official website for [RetroGate](https://github.com/Simplinity/retrogate) — a macOS proxy server that lets vintage Macs and PCs browse the modern web.
 
 ## Stack
 
