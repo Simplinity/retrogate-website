@@ -37,7 +37,7 @@ require_once __DIR__ . '/includes/header.php';
         |  |  4.7MB -> 12KB (HTML 3.2)   |  |
         |  |  23 images transcoded       |  |
         |  |                             |  |
-        |  |  "Think different."         |  |
+        |  |  > Think different.         |  |
         |  |   -- a Quadra 605, 2026     |  |
         |  |                             |  |
         |  |_____________________________|  |
