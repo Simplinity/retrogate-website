@@ -48,7 +48,7 @@ require_once __DIR__ . '/includes/header.php';
         |___________________________________|
         \     ________________________      /
          \   /                        \    /
-          \_/  Macintosh Classic II     \__/
+          \_/   Macintosh Classic II    \__/
     </pre>
   </div>
 </section>
