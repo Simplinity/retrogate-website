@@ -1,10 +1,4 @@
 <?php
-// Redirect www to non-www
-if (isset($_SERVER['HTTP_HOST']) && str_starts_with($_SERVER['HTTP_HOST'], 'www.')) {
-  header('Location: https://retrogate.app' . $_SERVER['REQUEST_URI'], true, 301);
-  exit;
-}
-
 /**
  * RetroGate Website — Header Include
  * Because even time-traveling proxy servers need proper HTML headers.
