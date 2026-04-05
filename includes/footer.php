@@ -50,5 +50,6 @@
 
 <!-- JavaScript -->
 <script src="/assets/js/main.js"></script>
+<script data-goatcounter="https://retrogate.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
