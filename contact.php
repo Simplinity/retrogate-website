@@ -65,7 +65,7 @@ require_once __DIR__ . '/includes/header.php';
   <?php if ($form_submitted): ?>
     <!-- Success State -->
     <div style="text-align: center; padding: 3rem 0;">
-      <div style="font-size: 4rem; margin-bottom: 1rem;">&#x1F4E8;</div>
+      
       <h2>Message Sent!</h2>
       <p style="margin: 1rem auto; max-width: 500px;">
         Your message has been transmitted via HTTP/1.0 to our inbox.
@@ -98,7 +98,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <div class="retro-form">
       <div style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1.5rem; font-size: 1.1rem;">
-        &#x1F4DD; COMPOSE NEW MESSAGE
+        COMPOSE NEW MESSAGE
       </div>
 
       <form method="POST" action="/contact.php">
@@ -151,12 +151,12 @@ require_once __DIR__ . '/includes/header.php';
           <label for="subject">Subject</label>
           <select id="subject" name="subject">
             <option value="" <?= $form_data['subject'] === '' ? 'selected' : '' ?>>-- Select --</option>
-            <option value="bug" <?= $form_data['subject'] === 'bug' ? 'selected' : '' ?>>&#x1F41B; Bug Report</option>
-            <option value="feature" <?= $form_data['subject'] === 'feature' ? 'selected' : '' ?>>&#x1F4A1; Feature Request</option>
-            <option value="help" <?= $form_data['subject'] === 'help' ? 'selected' : '' ?>>&#x1F198; Help / Support</option>
-            <option value="love" <?= $form_data['subject'] === 'love' ? 'selected' : '' ?>>&#x2764;&#xFE0F; Fan Mail / Love Letter</option>
-            <option value="vintage" <?= $form_data['subject'] === 'vintage' ? 'selected' : '' ?>>&#x1F4BB; Vintage Mac Story</option>
-            <option value="other" <?= $form_data['subject'] === 'other' ? 'selected' : '' ?>>&#x2753; Other</option>
+            <option value="bug" <?= $form_data['subject'] === 'bug' ? 'selected' : '' ?>>Bug Report</option>
+            <option value="feature" <?= $form_data['subject'] === 'feature' ? 'selected' : '' ?>>Feature Request</option>
+            <option value="help" <?= $form_data['subject'] === 'help' ? 'selected' : '' ?>>Help / Support</option>
+            <option value="love" <?= $form_data['subject'] === 'love' ? 'selected' : '' ?>>Fan Mail / Love Letter</option>
+            <option value="vintage" <?= $form_data['subject'] === 'vintage' ? 'selected' : '' ?>>Vintage Mac Story</option>
+            <option value="other" <?= $form_data['subject'] === 'other' ? 'selected' : '' ?>>Other</option>
           </select>
         </div>
 
@@ -169,12 +169,12 @@ require_once __DIR__ . '/includes/header.php';
 
         <div style="margin-top: 2rem;">
           <button type="submit" class="btn btn-primary" style="border: 3px solid var(--amber); cursor: pointer; font-family: var(--font-pixel);">
-            &#x1F4E8; SEND MESSAGE
+            SEND MESSAGE
           </button>
         </div>
 
         <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #999; font-family: var(--font-pixel);">
-          &#x1F512; This form is served over HTTP because we practice what we preach.
+          This form is served over HTTP because we practice what we preach.
           Your data is handled with the same care we give to a Macintosh SE &mdash; gently and with great reverence.
         </p>
       </form>
@@ -184,7 +184,7 @@ require_once __DIR__ . '/includes/header.php';
 
   <!-- Guestbook Section -->
   <div style="margin-top: 4rem;">
-    <h2 style="text-align: center; margin-bottom: 0.5rem;">&#x1F4D3; The Guestbook</h2>
+    <h2 style="text-align: center; margin-bottom: 0.5rem;">The Guestbook</h2>
     <p style="text-align: center; font-style: italic; color: var(--brown-light); margin-bottom: 2rem;">
       Because no self-respecting 90s website is complete without one.
     </p>

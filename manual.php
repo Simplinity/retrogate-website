@@ -19,13 +19,13 @@ require_once __DIR__ . '/includes/header.php';
 <!-- Download Bar -->
 <div class="manual-content">
   <div class="download-bar">
-    <p>&#x1F4D6; Prefer to read offline? Download the full manual.</p>
+    <p>Prefer to read offline? Download the full manual.</p>
     <a href="/downloads/MANUAL.md" download class="btn btn-on-light" style="font-size: 1rem; padding: 0.5rem 1.5rem;">&#x2B07; Download (.md)</a>
   </div>
 
   <!-- Table of Contents -->
   <div class="manual-toc">
-    <h3>&#x1F4CB; Table of Contents</h3>
+    <h3>Table of Contents</h3>
     <ol>
       <li><a href="#1-getting-started">Getting Started (The 90-Second Setup)</a></li>
       <li><a href="#2-the-dashboard">The Dashboard (Mission Control)</a></li>
@@ -298,9 +298,9 @@ require_once __DIR__ . '/includes/header.php';
 
   <p>The Delta column tells you how far the actual snapshot strayed:</p>
   <ul style="margin: 1rem 0 1rem 2rem;">
-    <li>&#x1F7E2; <strong>Green</strong> &mdash; Within 7 days. &ldquo;Exact&rdquo; if perfect match.</li>
-    <li>&#x1F7E1; <strong>Gold</strong> &mdash; 8 to 90 days off. Close enough.</li>
-    <li>&#x1F534; <strong>Red</strong> &mdash; More than 90 days off. The Wayback Machine did its best.</li>
+    <li><strong>Green</strong> &mdash; Within 7 days. &ldquo;Exact&rdquo; if perfect match.</li>
+    <li><strong>Gold</strong> &mdash; 8 to 90 days off. Close enough.</li>
+    <li><strong>Red</strong> &mdash; More than 90 days off. The Wayback Machine did its best.</li>
   </ul>
 
   <!-- ============== 8. WHAT RETROGATE DOES ============== -->
