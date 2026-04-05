@@ -149,7 +149,7 @@ Sources/
     </ol>
     <p style="margin-top: 1rem; font-size: 0.85rem; color: #888;">
       For the full setup guide with PAC file shortcuts, SheepShaver tips, and emotional support,
-      see the <a href="/manual.php">complete manual</a>.
+      see the <a href="/manual.php" style="color: var(--amber-dark);">complete manual</a>.
     </p>
   </div>
 
