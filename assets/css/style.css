@@ -704,7 +704,7 @@ table.retro-table tbody tr:hover {
 
 .how-it-works h2 {
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .how-it-works .tagline {
@@ -712,7 +712,7 @@ table.retro-table tbody tr:hover {
   font-family: var(--font-display);
   font-style: italic;
   color: var(--brown-light);
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
 }
 
 .steps {
