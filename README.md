@@ -65,7 +65,7 @@ Any PHP 8.3+ hosting will work. Apache, Nginx, or even a Raspberry Pi (ironic, s
 
 ## License
 
-MIT — same as RetroGate itself.
+GPLv3 — same as RetroGate itself.
 
 ---
 

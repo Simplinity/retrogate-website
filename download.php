@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/header.php';
 
 <section class="page-header">
   <h1>Download RetroGate</h1>
-  <p class="subtitle">Free. Open Source. MIT Licensed. Because vintage Macs deserve nice things.</p>
+  <p class="subtitle">Free. Open Source. GPLv3 Licensed. Because vintage Macs deserve nice things.</p>
 </section>
 
 <div class="breadcrumb">

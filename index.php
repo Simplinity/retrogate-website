@@ -286,7 +286,7 @@ require_once __DIR__ . '/includes/header.php';
   <div class="container">
     <h2>Ready to Give Your Old Mac a Second Life?</h2>
     <p>
-      RetroGate is free, open source (MIT license), and takes about 90 seconds to set up.
+      RetroGate is free, open source (GPLv3 license), and takes about 90 seconds to set up.
       The other 85 of those seconds are spent typing an IP address on a vintage keyboard.
     </p>
     <div class="hero-cta-group">
@@ -296,9 +296,6 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- ====== UNDER CONSTRUCTION ====== -->
-<div class="construction-banner">
-  <span>&#x1F6A7; THIS WEBSITE IS PERMANENTLY UNDER CONSTRUCTION &#x1F6A7;</span>
 </div>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
