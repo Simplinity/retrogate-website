@@ -29,7 +29,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; <?= date('Y') ?> Bruno van Branden (Simplinity) &mdash; MIT License</p>
+      <p>&copy; <?= date('Y') ?> Bruno van Branden (Simplinity) &mdash; GPLv3 License</p>
       <?php
         $counter_file = __DIR__ . '/../data/counter.txt';
         $counter_dir = dirname($counter_file);
