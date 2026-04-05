@@ -1146,8 +1146,8 @@ table.retro-table tbody tr:hover {
   border: 3px solid var(--brown);
   padding: 2rem;
   font-family: var(--font-pixel);
-  color: var(--green-crt);
-  text-shadow: 0 0 5px rgba(51, 255, 51, 0.3);
+  color: var(--amber-glow);
+  text-shadow: 0 0 5px rgba(212, 160, 23, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -1179,7 +1179,7 @@ table.retro-table tbody tr:hover {
   display: inline-block;
   width: 10px;
   height: 1.2em;
-  background: var(--green-crt);
+  background: var(--amber-glow);
   animation: blink 1s step-end infinite;
   vertical-align: text-bottom;
 }

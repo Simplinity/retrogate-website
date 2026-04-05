@@ -195,19 +195,19 @@ require_once __DIR__ . '/includes/header.php';
     <div class="wayback-visual">
       <div class="terminal-line"><span class="prompt">$</span> retrogate --wayback --date=1999-06-15</div>
       <div class="terminal-line">&nbsp;</div>
-      <div class="terminal-line">&#x1F4E1; Proxy running on 0.0.0.0:8080</div>
-      <div class="terminal-line">&#x231B; Wayback mode: June 15, 1999</div>
-      <div class="terminal-line">&#x1F50D; Tolerance: &plusmn;3 months</div>
+      <div class="terminal-line">  Proxy running on 0.0.0.0:8080</div>
+      <div class="terminal-line">  Wayback mode: June 15, 1999</div>
+      <div class="terminal-line">  Tolerance: +/-3 months</div>
       <div class="terminal-line">&nbsp;</div>
       <div class="terminal-line">[10:32:01] GET apple.com</div>
-      <div class="terminal-line">  &#x2192; web.archive.org/.../19990615/apple.com</div>
-      <div class="terminal-line">  &#x2713; Snapshot: Jun 14, 1999 (delta: 1 day)</div>
-      <div class="terminal-line">  &#x2713; HTML transcoded: 847KB &#x2192; 23KB</div>
-      <div class="terminal-line">  &#x2713; Images: 14 prefetched, 9 transcoded</div>
+      <div class="terminal-line">  -> web.archive.org/.../19990615/apple.com</div>
+      <div class="terminal-line">  ok Snapshot: Jun 14, 1999 (delta: 1 day)</div>
+      <div class="terminal-line">  ok HTML transcoded: 847KB -> 23KB</div>
+      <div class="terminal-line">  ok Images: 14 prefetched, 9 transcoded</div>
       <div class="terminal-line">&nbsp;</div>
       <div class="terminal-line">[10:32:03] GET google.com</div>
-      <div class="terminal-line">  &#x2192; Fetching from the before-times...</div>
-      <div class="terminal-line">  &#x2713; When Google had no logo.<span class="cursor"></span></div>
+      <div class="terminal-line">  -> Fetching from the before-times...</div>
+      <div class="terminal-line">  ok When Google had no logo.<span class="cursor"></span></div>
     </div>
   </div>
 </section>
