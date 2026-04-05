@@ -216,7 +216,7 @@ require_once __DIR__ . '/includes/header.php';
 <section class="browsers">
   <div class="browser-table-wrap">
     <h2>Vintage Presets</h2>
-    <p class="tagline">We support operating systems older than most of our interns.</p>
+    <p class="tagline">From back when "the cloud" was just weather.</p>
 
     <table class="retro-table">
       <thead>
