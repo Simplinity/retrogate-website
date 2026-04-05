@@ -26,9 +26,10 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
 
   <title><?= htmlspecialchars($full_title) ?></title>
 
-  <!-- Favicon: a tiny amber antenna -->
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon-64.png?v=100">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png?v=100">
+  <link rel="apple-touch-icon" href="/assets/img/appicon-128.png">
 
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
