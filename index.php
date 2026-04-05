@@ -115,9 +115,10 @@ require_once __DIR__ . '/includes/header.php';
       <span class="feature-icon">&#x1F50D;</span>
       <h3>Search Gateway</h3>
       <p>
-        A built-in search page powered by DuckDuckGo, stripped of JavaScript and served in HTML 3.2.
-        It&rsquo;s like Google in 1998, except it actually respects your privacy. And works on a
-        Power Mac 6100.
+        Point your vintage browser to <code>http://retrogate/</code> and you get a start page
+        with a DuckDuckGo-powered search box, curated links, and Wayback status.
+        No JavaScript, pure HTML 3.2. It&rsquo;s like Google in 1998, except it actually
+        respects your privacy.
       </p>
     </div>
   </div>
