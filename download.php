@@ -126,7 +126,7 @@ Sources/
       </p>
       <a href="/manual.php" class="btn btn-on-light" style="font-size: 0.9rem; padding: 0.4rem 1rem;">Read Online</a>
       <br>
-      <a href="/downloads/MANUAL.md" download style="font-size: 0.8rem; margin-top: 0.5rem; display: inline-block;">&#x2B07; Download .md</a>
+      <a href="/downloads/MANUAL.md" download style="font-size: 0.8rem; margin-top: 0.5rem; display: inline-block; color: var(--amber-dark);">&#x2B07; Download .md</a>
     </div>
 
     <div style="background: var(--white); border: 3px solid var(--beige-dark); padding: 1.5rem; text-align: center;">
