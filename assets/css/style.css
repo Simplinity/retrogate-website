@@ -445,8 +445,8 @@ pre:not(.ascii-computer)::before {
 
 /* --- ASCII Art Computer --- */
 .ascii-computer {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: clamp(0.55rem, 1.2vw, 0.8rem);
+  font-family: var(--font-pixel);
+  font-size: clamp(0.5rem, 1.2vw, 0.85rem);
   color: var(--beige);
   line-height: 1.15;
   white-space: pre;
