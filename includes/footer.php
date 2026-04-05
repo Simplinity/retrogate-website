@@ -3,7 +3,7 @@
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo-text">&#x1F4E1; RETROGATE</span>
+        <span class="logo-text">RETROGATE</span>
         <p>Made with love, SwiftNIO, and an irrational attachment to beige plastic.</p>
         <p style="margin-top: 0.5rem;">If your computer was manufactured before the Euro existed, we've got you covered.</p>
       </div>
