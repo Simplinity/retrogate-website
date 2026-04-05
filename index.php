@@ -242,7 +242,7 @@ require_once __DIR__ . '/includes/header.php';
       </tbody>
     </table>
 
-    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: #888;">
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: #888; max-width: 100%;">
       <strong>Historical note:</strong> System 6 (1988) and Windows 3.1 (1992) technically predate the World Wide Web.
       But they <em>can</em> run early browsers like MacWWW and Mosaic, so we&rsquo;re being generous.
     </p>
