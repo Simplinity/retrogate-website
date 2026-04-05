@@ -1206,6 +1206,7 @@ table.retro-table tbody tr:hover {
   font-style: italic;
   color: var(--beige-dark);
   font-size: 1.1rem;
+  margin: 0 auto;
 }
 
 /* --- Breadcrumb (retro-style) --- */
