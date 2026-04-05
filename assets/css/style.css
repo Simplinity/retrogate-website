@@ -252,7 +252,6 @@ pre::before {
   font-family: var(--font-pixel);
   font-size: 1.2rem;
   letter-spacing: 1px;
-  border: 1px solid transparent;
   transition: all 0.2s;
 }
 
@@ -263,8 +262,8 @@ pre::before {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--amber-glow);
-  border-color: var(--amber);
-  background: rgba(212, 160, 23, 0.1);
+
+
 }
 
 .nav-toggle {
@@ -422,7 +421,7 @@ pre::before {
 .btn-primary {
   background: var(--amber);
   color: var(--charcoal);
-  border-color: var(--amber);
+
 }
 
 .btn-primary:hover {
@@ -527,7 +526,7 @@ pre::before {
 }
 
 .feature-card:hover {
-  border-color: var(--amber);
+
   transform: translateY(-3px);
   box-shadow: 6px 6px 0 var(--beige-dark);
 }
@@ -650,7 +649,7 @@ table.retro-table tbody tr:nth-child(even) {
 }
 
 table.retro-table tbody tr:hover {
-  background: rgba(212, 160, 23, 0.1);
+
 }
 
 /* --- Testimonials / Quotes --- */
@@ -1052,7 +1051,7 @@ table.retro-table tbody tr:hover {
 }
 
 .faq-question:hover {
-  background: rgba(212, 160, 23, 0.1);
+
 }
 
 .faq-item.open .faq-question::after {
@@ -1112,7 +1111,7 @@ table.retro-table tbody tr:hover {
 .form-group textarea:focus,
 .form-group select:focus {
   outline: none;
-  border-color: var(--amber);
+
   box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
 }
 
