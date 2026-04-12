@@ -482,7 +482,7 @@ require_once __DIR__ . '/includes/header.php';
   <p>Both. SheepShaver, Basilisk II, QEMU, PCem, 86Box, or genuine beige hardware &mdash; RetroGate doesn&rsquo;t discriminate.</p>
 
   <p><strong>Q: Can I run it on a Raspberry Pi?</strong></p>
-  <p>No. RetroGate requires macOS 14+. It&rsquo;s built with SwiftUI, SwiftNIO, and CoreGraphics.</p>
+  <p>No. RetroGate requires macOS 13+. It&rsquo;s built with SwiftUI, SwiftNIO, and CoreGraphics, and runs on both Apple Silicon and Intel.</p>
 
   <p><strong>Q: Why can&rsquo;t I use the Wayback Machine directly?</strong></p>
   <p>Because the Wayback Machine&rsquo;s website is a modern web application requiring JavaScript, CSS, and HTTPS &mdash; none of which your vintage browser supports.</p>

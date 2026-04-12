@@ -490,7 +490,7 @@ Make sure your preset platform matches your actual machine. Mac presets output M
 A: Both. If your vintage Mac or PC can make HTTP requests through a proxy, RetroGate will handle the rest. SheepShaver, Basilisk II, QEMU, PCem, 86Box, or genuine beige hardware — RetroGate doesn't discriminate.
 
 **Q: Can I run RetroGate on a Raspberry Pi?**
-A: No. RetroGate is a macOS app built with SwiftUI, SwiftNIO, and CoreGraphics. It requires macOS 14+. It's a proxy that runs on your Mac and serves your vintage machines over the network.
+A: No. RetroGate is a macOS app built with SwiftUI, SwiftNIO, and CoreGraphics. It requires macOS 13+ and runs on both Apple Silicon and Intel. It's a proxy that runs on your Mac and serves your vintage machines over the network.
 
 **Q: Why can't I just use the Wayback Machine directly on my vintage browser?**
 A: Because the Wayback Machine's website itself is a modern web application. It uses JavaScript, modern CSS, and HTTPS — none of which your vintage browser supports. RetroGate acts as an intermediary, fetching from the Wayback Machine with modern TLS and delivering clean archived content in vintage-compatible HTML.

@@ -19,26 +19,47 @@ require_once __DIR__ . '/includes/header.php';
   <!-- Main Download -->
   <div style="background: var(--white); border: 3px solid var(--amber); padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
     <div style="margin-bottom: 1rem;"><img src="/assets/img/appicon-128.png" alt="RetroGate" width="128" height="128"></div>
-    <h2 style="margin-bottom: 0.5rem;">RetroGate v1.0.0</h2>
+    <h2 style="margin-bottom: 0.5rem;">RetroGate v1.1.0</h2>
     <p style="font-family: var(--font-display); font-style: italic; color: var(--brown-light); margin-bottom: 0.5rem;">
       Browse the modern web on vintage Macs
     </p>
     <p style="color: #666; margin-bottom: 2rem;">
-      macOS 14+ (Sonoma) &mdash; Apple Silicon<br>
-      <code>RetroGate-1.0.0.dmg</code> &mdash; 6.5 MB &mdash; drag-to-Applications
+      macOS 13+ (Ventura) &mdash; Universal Binary (Apple Silicon &amp; Intel)<br>
+      <code>RetroGate-1.1.0-universal.dmg</code> &mdash; 6.2 MB &mdash; drag-to-Applications
     </p>
 
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="https://github.com/Simplinity/retrogate/releases/download/v1.0.0/RetroGate-1.0.0.dmg" class="btn btn-primary">
+      <a href="https://github.com/Simplinity/retrogate/releases/download/v1.1.0/RetroGate-1.1.0-universal.dmg" class="btn btn-primary">
         &#x2B07; Download DMG
       </a>
-      <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.0.0" class="btn btn-on-light" target="_blank">
+      <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.1.0" class="btn btn-on-light" target="_blank">
         Release Notes
       </a>
     </div>
 
     <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #999; font-family: var(--font-pixel); text-align: center; max-width: 100%;">
       Or build from source: <code style="background: var(--beige); padding: 0.2rem 0.5rem;">swift build &amp;&amp; swift run RetroGate</code>
+    </p>
+  </div>
+
+  <!-- What's New in v1.1 -->
+  <div style="background: var(--charcoal); border: 3px solid var(--amber); padding: 2rem; margin-bottom: 2rem; color: var(--beige);">
+    <h3 style="font-family: var(--font-pixel); color: var(--amber-glow); margin-bottom: 1rem;">
+      What&rsquo;s New in v1.1 <span style="font-size: 0.7em; color: var(--green-crt); animation: blink 1s step-end infinite;">&nbsp;NEW!</span>
+    </h3>
+
+    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+      <li>&#x1F4E6; <strong style="color: var(--amber);">Universal Binary</strong> &mdash;
+        Apple Silicon <em>and</em> Intel. Fat binaries are back, baby. Just like 2006, but with better taste in hardware.</li>
+      <li>&#x1F4BB; <strong style="color: var(--amber);">macOS 13+ (Ventura)</strong> &mdash;
+        Your 2017 Intel MacBook Pro can finally join the retro party. It was getting jealous.</li>
+      <li>&#x1F514; <strong style="color: var(--amber);">Update Checker</strong> &mdash;
+        RetroGate now tells you when there&rsquo;s a new version. Vintage Mac users deserve modern convenience &mdash; the irony is not lost on us.</li>
+    </ul>
+
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--beige-dark);">
+      Full changelog on <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.1.0" style="color: var(--amber);" target="_blank">GitHub</a>.
+      Upgrading from v1.0? Just replace the app in your Applications folder. Your Quadra won&rsquo;t notice a thing.
     </p>
   </div>
 
@@ -50,11 +71,11 @@ require_once __DIR__ . '/includes/header.php';
       <tbody>
         <tr>
           <td style="font-weight: bold; width: 40%;">Operating System</td>
-          <td>macOS 14+ (Sonoma or later)</td>
+          <td>macOS 13+ (Ventura or later)</td>
         </tr>
         <tr>
           <td style="font-weight: bold;">Processor</td>
-          <td>Apple Silicon (M1/M2/M3/M4)</td>
+          <td>Apple Silicon or Intel (Universal Binary)</td>
         </tr>
         <tr>
           <td style="font-weight: bold;">RAM</td>
@@ -62,7 +83,7 @@ require_once __DIR__ . '/includes/header.php';
         </tr>
         <tr>
           <td style="font-weight: bold;">Disk Space</td>
-          <td>6.5 MB + cache for Wayback responses</td>
+          <td>6.2 MB + cache for Wayback responses</td>
         </tr>
         <tr>
           <td style="font-weight: bold;">Network</td>
@@ -142,7 +163,7 @@ Sources/
   <div style="background: var(--cream); border: 3px solid var(--beige-dark); padding: 2rem; margin-bottom: 2rem;">
     <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">Quick Start (90 Seconds)</h3>
     <ol style="padding-left: 1.5rem; line-height: 2;">
-      <li>Download <code>RetroGate-1.0.0.dmg</code>, open it, drag to Applications</li>
+      <li>Download <code>RetroGate-1.1.0-universal.dmg</code>, open it, drag to Applications</li>
       <li>Launch RetroGate &mdash; note the proxy address (e.g., <code>192.168.0.130:8080</code>)</li>
       <li>On your vintage Mac, set HTTP proxy to that address</li>
       <li>Browse. Marvel. Tell your Quadra it&rsquo;s not obsolete after all.</li>

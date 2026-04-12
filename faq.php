@@ -70,10 +70,10 @@ require_once __DIR__ . '/includes/header.php';
   <div class="faq-item">
     <button class="faq-question">Can I run RetroGate on a Raspberry Pi?</button>
     <div class="faq-answer">
-      <p>No. RetroGate is a macOS app built with SwiftUI, SwiftNIO, and CoreGraphics. It requires macOS 14+ on Apple Silicon.</p>
-      <p>We know this is slightly ironic &mdash; a proxy for old computers that requires the newest computer.
+      <p>No. RetroGate is a macOS app built with SwiftUI, SwiftNIO, and CoreGraphics. It requires macOS 13+ and runs natively on both Apple Silicon and Intel as a Universal Binary.</p>
+      <p>We know this is slightly ironic &mdash; a proxy for old computers that requires a not-so-old computer.
         But SwiftNIO is really fast, CoreGraphics handles image transcoding beautifully, and frankly,
-        your M1/M2/M3/M4 Mac isn&rsquo;t doing anything else productive while it serves HTML 3.2 to a Quadra.</p>
+        your Mac isn&rsquo;t doing anything else productive while it serves HTML 3.2 to a Quadra.</p>
     </div>
   </div>
 
