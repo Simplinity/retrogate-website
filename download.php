@@ -45,7 +45,7 @@ require_once __DIR__ . '/includes/header.php';
   <!-- What's New in v1.1 -->
   <div style="background: var(--charcoal); border: 3px solid var(--amber); padding: 2rem; margin-bottom: 2rem; color: var(--beige);">
     <h3 style="font-family: var(--font-pixel); color: var(--amber-glow); margin-bottom: 1rem;">
-      What&rsquo;s New in v1.1 <span style="font-size: 0.7em; color: var(--green-crt); animation: blink 1s step-end infinite;">&nbsp;NEW!</span>
+      What&rsquo;s New in v1.1 <span style="font-size: 0.7em; color: var(--amber-glow); animation: blink 1s step-end infinite;">&nbsp;NEW!</span>
     </h3>
 
     <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
