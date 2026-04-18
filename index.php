@@ -9,7 +9,7 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RetroGate","description":"A macOS proxy server that lets vintage Macs and PCs browse the modern web. TLS bridging, HTML5 to HTML 3.2 transcoding, image conversion, and Wayback Machine time travel.","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 14+","url":"https://retrogate.app","downloadUrl":"https://github.com/Simplinity/retrogate/releases/download/v1.0.0/RetroGate-1.0.0.dmg","softwareVersion":"1.0.0","fileSize":"6.5MB","license":"https://www.gnu.org/licenses/gpl-3.0.html","isAccessibleForFree":true,"author":{"@type":"Person","name":"Bruno van Branden","url":"https://github.com/Simplinity"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"RetroGate","description":"A macOS proxy server that lets vintage Macs and PCs browse the modern web. TLS bridging, HTML5 to HTML 3.2 transcoding, image conversion, Wayback Machine time travel, local cache with capsules and full-text search.","applicationCategory":"UtilitiesApplication","operatingSystem":"macOS 13+","url":"https://retrogate.app","downloadUrl":"https://github.com/Simplinity/retrogate/releases/download/v1.2.0/RetroGate-1.2.0-universal.dmg","softwareVersion":"1.2.0","fileSize":"7.5MB","license":"https://www.gnu.org/licenses/gpl-3.0.html","isAccessibleForFree":true,"author":{"@type":"Person","name":"Bruno van Branden","url":"https://github.com/Simplinity"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
 
 <!-- ====== HERO ====== -->
@@ -61,7 +61,7 @@ require_once __DIR__ . '/includes/header.php';
 <section class="features">
   <div class="features-header">
     <h2>What It Does</h2>
-    <p class="tagline">Five miracles of modern engineering, performed at 8080 requests per hour.</p>
+    <p class="tagline">Nine miracles of modern engineering, performed at 8080 requests per hour.</p>
   </div>
 
   <div class="feature-grid">
@@ -97,7 +97,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <div class="feature-card">
       <span class="feature-icon">&lt;&lt;</span>
-      <h3>Wayback Machine Mode <span class="badge-new">NEW!</span></h3>
+      <h3>Wayback Machine Mode</h3>
       <p>
         Set a date, and RetroGate fetches every page from the Internet Archive&rsquo;s Wayback Machine.
         Browse the web as it was in 1997. See Apple.com before the iMac. See Google before the logo.
@@ -123,6 +123,37 @@ require_once __DIR__ . '/includes/header.php';
         with a DuckDuckGo-powered search box, curated links, and Wayback status.
         No JavaScript, pure HTML 3.2. It&rsquo;s like Google in 1998, except it actually
         respects your privacy.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">[*]</span>
+      <h3>Smart Cache <span class="badge-new">NEW!</span></h3>
+      <p>
+        Pages load instantly after the first fetch. A page from June 15, 1999 will always
+        be the page from June 15, 1999 &mdash; might as well cache it. Pin what matters,
+        evict what doesn&rsquo;t, watch the &ldquo;time saved&rdquo; stat climb. The Wayback
+        Machine is a non-profit. Cache responsibly.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">{:}</span>
+      <h3>Capsules <span class="badge-new">NEW!</span></h3>
+      <p>
+        Bundle cached pages into a single <code>.retrogate-capsule</code> file. Share it,
+        archive it, restore it on another Mac, import and merge back. It&rsquo;s a mixtape
+        for websites that no longer exist. No one asked for this. You&rsquo;re welcome.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <span class="feature-icon">?&gt;</span>
+      <h3>Full-Text Search <span class="badge-new">NEW!</span></h3>
+      <p>
+        SQLite FTS5 across every page you&rsquo;ve cached. Porter stemming, AND/OR/NEAR
+        operators, prefix wildcards. Faster than the search box on most of the websites
+        you&rsquo;re archiving. Your PowerBook can finally out-search a Pentium II.
       </p>
     </div>
   </div>

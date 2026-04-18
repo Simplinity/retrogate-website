@@ -6,7 +6,7 @@
 
 $site_title = $page_title ?? 'RetroGate';
 $full_title = ($page_title ?? false) ? "$page_title — RetroGate" : 'RetroGate — Browse the Modern Web on Vintage Macs';
-$meta_description = $page_description ?? 'RetroGate is a macOS proxy server that bridges the gap between classic Macintosh computers (1984–2005) and today\'s internet. Time travel for your beige plastic friends.';
+$meta_description = $page_description ?? 'RetroGate is a macOS proxy server that bridges classic Macintosh computers (1984–2005) and today\'s internet. Now with local cache, capsules, and full-text search.';
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 $canonical_path = ($current_page === 'index') ? '/' : '/' . $current_page . '.php';
 $canonical_url = 'https://retrogate.app' . $canonical_path;

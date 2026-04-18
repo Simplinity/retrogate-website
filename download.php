@@ -19,20 +19,20 @@ require_once __DIR__ . '/includes/header.php';
   <!-- Main Download -->
   <div style="background: var(--white); border: 3px solid var(--amber); padding: 2.5rem; text-align: center; margin-bottom: 2rem;">
     <div style="margin-bottom: 1rem;"><img src="/assets/img/appicon-128.png" alt="RetroGate" width="128" height="128"></div>
-    <h2 style="margin-bottom: 0.5rem;">RetroGate v1.1.0</h2>
+    <h2 style="margin-bottom: 0.5rem;">RetroGate v1.2.0</h2>
     <p style="font-family: var(--font-display); font-style: italic; color: var(--brown-light); margin-bottom: 0.5rem;">
       Browse the modern web on vintage Macs
     </p>
     <p style="color: #666; margin-bottom: 2rem;">
       macOS 13+ (Ventura) &mdash; Universal Binary (Apple Silicon &amp; Intel)<br>
-      <code>RetroGate-1.1.0-universal.dmg</code> &mdash; 6.2 MB &mdash; drag-to-Applications
+      <code>RetroGate-1.2.0-universal.dmg</code> &mdash; 7.5 MB &mdash; drag-to-Applications
     </p>
 
     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-      <a href="https://github.com/Simplinity/retrogate/releases/download/v1.1.0/RetroGate-1.1.0-universal.dmg" class="btn btn-primary">
+      <a href="https://github.com/Simplinity/retrogate/releases/download/v1.2.0/RetroGate-1.2.0-universal.dmg" class="btn btn-primary">
         &#x2B07; Download DMG
       </a>
-      <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.1.0" class="btn btn-on-light" target="_blank">
+      <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.2.0" class="btn btn-on-light" target="_blank">
         Release Notes
       </a>
     </div>
@@ -42,24 +42,32 @@ require_once __DIR__ . '/includes/header.php';
     </p>
   </div>
 
-  <!-- What's New in v1.1 -->
+  <!-- What's New in v1.2 -->
   <div style="background: var(--charcoal); border: 3px solid var(--amber); padding: 2rem; margin-bottom: 2rem; color: var(--beige);">
     <h3 style="font-family: var(--font-pixel); color: var(--amber-glow); margin-bottom: 1rem;">
-      What&rsquo;s New in v1.1 <span style="font-size: 0.7em; color: var(--amber-glow); animation: blink 1s step-end infinite;">&nbsp;NEW!</span>
+      What&rsquo;s New in v1.2 <span style="font-size: 0.7em; color: var(--amber-glow); animation: blink 1s step-end infinite;">&nbsp;NEW!</span>
     </h3>
 
     <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-      <li>&#x1F4E6; <strong style="color: var(--amber);">Universal Binary</strong> &mdash;
-        Apple Silicon <em>and</em> Intel. Fat binaries are back, baby. Just like 2006, but with better taste in hardware.</li>
-      <li>&#x1F4BB; <strong style="color: var(--amber);">macOS 13+ (Ventura)</strong> &mdash;
-        Your 2017 Intel MacBook Pro can finally join the retro party. It was getting jealous.</li>
-      <li>&#x1F514; <strong style="color: var(--amber);">Update Checker</strong> &mdash;
-        RetroGate now tells you when there&rsquo;s a new version. Vintage Mac users deserve modern convenience &mdash; the irony is not lost on us.</li>
+      <li>&#x1F4BE; <strong style="color: var(--amber);">Smart Cache</strong> &mdash;
+        Pages you&rsquo;ve already seen load instantly. The Wayback Machine is a non-profit. Cache responsibly.</li>
+      <li>&#x1F4E6; <strong style="color: var(--amber);">Capsules</strong> &mdash;
+        Bundle archived pages into <code>.retrogate-capsule</code> files. Like mixtapes, but for websites that no longer exist.</li>
+      <li>&#x1F50D; <strong style="color: var(--amber);">Full-Text Search</strong> &mdash;
+        SQLite FTS5 with Porter stemming over every page you&rsquo;ve cached. You can finally find that HyperCard page. In milliseconds. From 1996.</li>
+      <li>&#x1F4E1; <strong style="color: var(--amber);">Prefetch</strong> &mdash;
+        Paste a list of URLs, RetroGate warms the cache at one request per second. Polite to archive.org. Respectful, like a 1999 web crawler.</li>
+      <li>&#x2708; <strong style="color: var(--amber);">Offline Mode</strong> &mdash;
+        Demoing on a plane with no Wi-Fi? Already-cached pages still work. Everything else politely 404s. Your PowerBook has been training for this its whole life.</li>
+      <li>&#x1F4CA; <strong style="color: var(--amber);">Better Logs</strong> &mdash;
+        Request log and Wayback timeline now sortable, filterable, and occasionally informative. Hero stats up top, because we felt fancy.</li>
+      <li>&#x2699; <strong style="color: var(--amber);">Sidebar Settings</strong> &mdash;
+        General and Advanced settings now live in the sidebar. One less window. Your 4:3 display thanks you.</li>
     </ul>
 
     <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--beige-dark);">
-      Full changelog on <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.1.0" style="color: var(--amber);" target="_blank">GitHub</a>.
-      Upgrading from v1.0? Just replace the app in your Applications folder. Your Quadra won&rsquo;t notice a thing.
+      Full changelog on <a href="https://github.com/Simplinity/retrogate/releases/tag/v1.2.0" style="color: var(--amber);" target="_blank">GitHub</a>.
+      Upgrading from v1.1? Just replace the app in your Applications folder. Your existing settings survive. Your Quadra won&rsquo;t notice a thing &mdash; until it does.
     </p>
   </div>
 
@@ -83,7 +91,7 @@ require_once __DIR__ . '/includes/header.php';
         </tr>
         <tr>
           <td style="font-weight: bold;">Disk Space</td>
-          <td>6.2 MB + cache for Wayback responses</td>
+          <td>7.5 MB app + cache &amp; capsules (you set the limit)</td>
         </tr>
         <tr>
           <td style="font-weight: bold;">Network</td>
@@ -163,7 +171,7 @@ Sources/
   <div style="background: var(--cream); border: 3px solid var(--beige-dark); padding: 2rem; margin-bottom: 2rem;">
     <h3 style="font-family: var(--font-pixel); color: var(--amber-dark); margin-bottom: 1rem;">Quick Start (90 Seconds)</h3>
     <ol style="padding-left: 1.5rem; line-height: 2;">
-      <li>Download <code>RetroGate-1.1.0-universal.dmg</code>, open it, drag to Applications</li>
+      <li>Download <code>RetroGate-1.2.0-universal.dmg</code>, open it, drag to Applications</li>
       <li>Launch RetroGate &mdash; note the proxy address (e.g., <code>192.168.0.130:8080</code>)</li>
       <li>On your vintage Mac, set HTTP proxy to that address</li>
       <li>Browse. Marvel. Tell your Quadra it&rsquo;s not obsolete after all.</li>

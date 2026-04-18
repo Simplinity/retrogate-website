@@ -23,6 +23,32 @@ require_once __DIR__ . '/includes/header.php';
     <a href="/downloads/MANUAL.md" download class="btn btn-on-light" style="font-size: 1rem; padding: 0.5rem 1.5rem;">&#x2B07; Download (.md)</a>
   </div>
 
+  <!-- v1.2.0 Highlight Block -->
+  <div style="background: var(--charcoal); border: 3px solid var(--amber); padding: 1.75rem; margin: 0 0 2rem 0; color: var(--beige);">
+    <h3 style="font-family: var(--font-pixel); color: var(--amber-glow); margin: 0 0 0.75rem 0;">
+      What&rsquo;s New in v1.2 <span style="font-size: 0.7em; color: var(--amber-glow); animation: blink 1s step-end infinite;">&nbsp;NEW!</span>
+    </h3>
+    <p style="margin-bottom: 0.75rem;">
+      This manual still documents the v1.1 core. RetroGate v1.2.0 adds a complete cache system, capsules,
+      full-text search, prefetch, offline mode, sortable logs, and sidebar settings. Here&rsquo;s the short version:
+    </p>
+    <ul style="list-style: none; padding: 0; margin: 0 0 0.75rem 0; line-height: 1.8;">
+      <li>&#x1F4BE; <strong style="color: var(--amber);">Cache tab</strong> &mdash; Monitor &rarr; Cache. Hero stats, sortable columns, pin/delete/clear-all, URL &amp; domain filters, detail drawer with editable tags and notes.</li>
+      <li>&#x1F4E6; <strong style="color: var(--amber);">Capsules</strong> &mdash; Bundle cached pages into <code>.retrogate-capsule</code> files. Export, share, import and merge back. Mixtapes for websites.</li>
+      <li>&#x1F50D; <strong style="color: var(--amber);">Full-Text Search</strong> &mdash; SQLite FTS5 with Porter stemming. Phrases, AND/OR/NEAR, prefix wildcards. Build the index once, search forever.</li>
+      <li>&#x1F4E1; <strong style="color: var(--amber);">Prefetch</strong> &mdash; Paste URL lists (comments and bare hostnames ok). Warms the cache at 1 req/sec. Wrap into a capsule on finish.</li>
+      <li>&#x2708; <strong style="color: var(--amber);">Offline Mode</strong> &mdash; Gold dot in the sidebar when active. Cache hits work, misses return a local 404. No archive.org calls.</li>
+      <li>&#x2699; <strong style="color: var(--amber);">Sidebar Settings</strong> &mdash; General and Advanced now live in the main window under &ldquo;Configure&rdquo;. ⌘, jumps to General.</li>
+      <li>&#x1F4CA; <strong style="color: var(--amber);">Retention Policy</strong> &mdash; Optional max-size (MB) and max-age (days), with pin-aware LRU eviction.</li>
+    </ul>
+    <p style="margin: 0; font-size: 0.9rem; color: var(--beige-dark);">
+      Full v1.2 documentation is on
+      <a href="https://github.com/Simplinity/retrogate/tree/main/docs" style="color: var(--amber);" target="_blank">GitHub</a>,
+      and the in-app Help menu. The rest of this page still applies &mdash; the core TLS/HTML/image pipeline
+      hasn&rsquo;t changed. Your Quadra won&rsquo;t notice a thing.
+    </p>
+  </div>
+
   <!-- Table of Contents -->
   <div class="manual-toc">
     <h3>Table of Contents</h3>

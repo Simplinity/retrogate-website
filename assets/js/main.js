@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('%c' +
     '╔══════════════════════════════════════╗\n' +
     '║                                      ║\n' +
-    '║     📡 RETROGATE v1.1               ║\n' +
+    '║     📡 RETROGATE v1.2               ║\n' +
     '║                                      ║\n' +
     '║  You found the dev console!          ║\n' +
     '║  Your vintage Mac would be proud.    ║\n' +

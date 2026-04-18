@@ -164,6 +164,67 @@ require_once __DIR__ . '/includes/header.php';
     </div>
   </div>
 
+  <!-- Cache & Capsules -->
+  <h2 style="margin-top: 2.5rem; margin-bottom: 1.5rem; border-left: 5px solid var(--amber); padding-left: 1rem;">Cache &amp; Capsules</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What&rsquo;s a capsule?</button>
+    <div class="faq-answer">
+      <p>A capsule is a named collection of cached pages, exported as a single <code>.retrogate-capsule</code>
+        file. You can bundle up a research binge, a set of Wayback snapshots, or just a pile of sites that
+        no longer exist, and share the whole thing with another RetroGate user. Import it, and those pages
+        are instantly available on their Mac too.</p>
+      <p>It&rsquo;s a mixtape. For websites. In 2026. We don&rsquo;t know why either. But we&rsquo;re
+        committed to it.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I use RetroGate offline?</button>
+    <div class="faq-answer">
+      <p>Yes &mdash; well, partially. Flip on <strong>Offline Mode</strong> and RetroGate serves already-cached
+        pages straight from disk without touching archive.org or the live web. Cache misses return a local 404
+        instead of waiting for a network timeout. A gold dot in the sidebar reminds you the world is (gently)
+        walled off.</p>
+      <p>Perfect for conference demos on flaky Wi-Fi, airplane mode nostalgia sessions, or when
+        rate-limiting archive.org feels impolite. Your PowerBook has been training for this its whole life.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How much disk space does the cache use?</button>
+    <div class="faq-answer">
+      <p>As much as you let it. Set a <strong>max size</strong> (in MB) and a <strong>max age</strong> (in days)
+        in the retention policy, and RetroGate evicts the least-recently-used entries first. Pinned entries are
+        never evicted &mdash; even if your cache is 100% pinned, nothing gets deleted. At that point it&rsquo;s
+        your problem, not ours.</p>
+      <p>The Cache tab shows live stats: entries, on-disk size, hit rate, oldest entry. Clear-all is one
+        button and zero regrets.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I search through my cached pages?</button>
+    <div class="faq-answer">
+      <p>Yes. RetroGate ships with SQLite FTS5 full-text search using Porter stemming. Supports phrases,
+        AND/OR/NEAR operators, and prefix wildcards. Build the index once (one button, takes a few seconds),
+        then search across everything you&rsquo;ve ever cached in milliseconds.</p>
+      <p>It&rsquo;s probably faster than the search box on most of the websites you&rsquo;re archiving.
+        Which says more about modern search boxes than it does about SQLite.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What&rsquo;s Prefetch for?</button>
+    <div class="faq-answer">
+      <p>Paste a list of URLs (one per line, <code>#</code> comments allowed, bare hostnames ok) and RetroGate
+        warms the cache at one request per second. When it finishes, optionally wrap the whole batch into a
+        capsule for sharing or archival.</p>
+      <p>One request per second is deliberate. Archive.org is a non-profit. Don&rsquo;t be the reason they
+        add a rate-limit. Be polite, like a 1999 web crawler with manners.</p>
+    </div>
+  </div>
+
   <!-- SheepShaver -->
   <h2 style="margin-top: 2.5rem; margin-bottom: 1.5rem; border-left: 5px solid var(--amber); padding-left: 1rem;">SheepShaver &amp; Emulators</h2>
 
