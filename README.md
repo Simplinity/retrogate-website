@@ -59,6 +59,17 @@ php -S localhost:8000
 
 Any PHP 8.3+ hosting will work. Apache, Nginx, or even a Raspberry Pi (ironic, since RetroGate itself requires macOS).
 
+The live site is synced with `deploy.sh` (rsync over SSH). It deploys only
+what is committed at `HEAD`, mirrors the repo on the server, and never
+touches `data/` (visitor counter, anti-spam secret). Server host, user and
+path live outside the repo in `~/.config/retrogate-website/deploy.env`.
+
+```bash
+./deploy.sh --dry-run        # preview
+./deploy.sh                  # deploy HEAD
+./deploy.sh --install-hooks  # auto-deploy after every commit or merge on main
+```
+
 ## Best Viewed With
 
 - Any modern browser (we're not *that* retro)

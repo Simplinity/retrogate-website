@@ -1,0 +1,7 @@
+# Not part of the live site. deploy.sh uses `git archive`, which honours these.
+README.md       export-ignore
+STYLE-GUIDE.md  export-ignore
+deploy.sh       export-ignore
+.gitignore      export-ignore
+.gitattributes  export-ignore
+.claude         export-ignore
