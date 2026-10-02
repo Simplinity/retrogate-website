@@ -6,6 +6,33 @@
 $page_title = 'Contact';
 $page_description = 'Get in touch with the RetroGate team. Bug reports, feature requests, love letters from vintage Macs — we read them all.';
 
+require_once __DIR__ . '/includes/antispam.php';
+
+// Single source of truth for the <select>s: rendered below AND used by the
+// anti-spam check (a browser can only submit values that exist here).
+$favorite_os_options = [
+  ''        => '-- Choose wisely --',
+  'system6' => 'System 6 (the purist\'s choice)',
+  'system7' => 'System 7 (the golden age)',
+  'macos8'  => 'Mac OS 8 (the Platinum era)',
+  'macos9'  => 'Mac OS 9 (the GOAT, fight me)',
+  'macosx'  => 'Mac OS X (Aqua baby!)',
+  'win31'   => 'Windows 3.1 (bravery)',
+  'win95'   => 'Windows 95 (Start me up!)',
+  'win98'   => 'Windows 98 (peak Windows)',
+  'other'   => 'Other (please specify in message)',
+  'all'     => 'I love them all equally (liar)',
+];
+$subject_options = [
+  ''        => '-- Select --',
+  'bug'     => 'Bug Report',
+  'feature' => 'Feature Request',
+  'help'    => 'Help / Support',
+  'love'    => 'Fan Mail / Love Letter',
+  'vintage' => 'Vintage Mac Story',
+  'other'   => 'Other',
+];
+
 $form_submitted = false;
 $form_errors = [];
 $form_data = [
@@ -27,21 +54,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     'favorite_os' => trim($_POST['favorite_os'] ?? ''),
   ];
 
-  // Validation
-  if (empty($form_data['name'])) {
-    $form_errors[] = 'Please enter your name (or your Mac\'s name — we don\'t judge).';
-  }
-  if (empty($form_data['email']) || !filter_var($form_data['email'], FILTER_VALIDATE_EMAIL)) {
-    $form_errors[] = 'Please enter a valid email address. AOL addresses are welcome.';
-  }
-  if (empty($form_data['message'])) {
-    $form_errors[] = 'Please enter a message. Even "bong" counts.';
+  // Anti-spam (see includes/antispam.php for what each layer does)
+  [$spam_verdict, $spam_reason] = antispam_check($_POST, [
+    'honeypots'     => ['website', 'newsletter'],
+    'enums'         => [
+      'favorite_os' => array_keys($favorite_os_options),
+      'subject'     => array_keys($subject_options),
+    ],
+    'text_fields'   => ['name', 'vintage_machine', 'message'],
+    'message_field' => 'message',
+  ]);
+
+  if ($spam_verdict === 'bot') {
+    antispam_log('blocked', $spam_reason);
+    $form_submitted = true;   // Show the success page; don't tell the bot why.
+  } elseif ($spam_verdict === 'stale') {
+    $form_errors[] = 'This form sat open so long the token expired. Your message is still here — just press SEND again.';
   }
 
-  // Honeypot check
-  if (!empty($_POST['website_url'])) {
-    // Bot detected — silently "succeed"
-    $form_submitted = true;
+  // Validation (only matters for humans)
+  if (!$form_submitted) {
+    if (empty($form_data['name'])) {
+      $form_errors[] = 'Please enter your name (or your Mac\'s name — we don\'t judge).';
+    }
+    if (empty($form_data['email']) || !filter_var($form_data['email'], FILTER_VALIDATE_EMAIL)) {
+      $form_errors[] = 'Please enter a valid email address. AOL addresses are welcome.';
+    }
+    if (empty($form_data['message'])) {
+      $form_errors[] = 'Please enter a message. Even "bong" counts.';
+    }
   }
 
   if (empty($form_errors) && !$form_submitted) {
@@ -76,6 +117,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
   }
 }
+
+// Keeps the original render time on a resubmit after a validation error.
+$form_token = antispam_token_for_form($_POST['form_token'] ?? null);
 
 require_once __DIR__ . '/includes/header.php';
 ?>
@@ -128,11 +172,8 @@ require_once __DIR__ . '/includes/header.php';
       </div>
 
       <form method="POST" action="/contact.php">
-        <!-- Honeypot field — hidden from humans, visible to bots -->
-        <div style="position: absolute; left: -9999px;" aria-hidden="true">
-          <label for="website_url">Leave this empty</label>
-          <input type="text" name="website_url" id="website_url" tabindex="-1" autocomplete="off">
-        </div>
+        <!-- Signed render time; see includes/antispam.php -->
+        <input type="hidden" name="form_token" value="<?= htmlspecialchars($form_token) ?>">
 
         <div class="form-group">
           <label for="name">Your Name *</label>
@@ -148,6 +189,12 @@ require_once __DIR__ . '/includes/header.php';
           <div class="field-hint">We promise not to sell this to any dot-com startups. It's not 1999 anymore. Wait...</div>
         </div>
 
+        <!-- Honeypot: visually hidden, skipped by screen readers and Tab. Bots fill it anyway. -->
+        <div class="form-group form-group-aux" aria-hidden="true">
+          <label for="website">Website (leave this empty)</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
         <div class="form-group">
           <label for="vintage_machine">Your Vintage Machine</label>
           <input type="text" id="vintage_machine" name="vintage_machine"
@@ -159,30 +206,18 @@ require_once __DIR__ . '/includes/header.php';
         <div class="form-group">
           <label for="favorite_os">Favorite Vintage OS</label>
           <select id="favorite_os" name="favorite_os">
-            <option value="" <?= $form_data['favorite_os'] === '' ? 'selected' : '' ?>>-- Choose wisely --</option>
-            <option value="system6" <?= $form_data['favorite_os'] === 'system6' ? 'selected' : '' ?>>System 6 (the purist's choice)</option>
-            <option value="system7" <?= $form_data['favorite_os'] === 'system7' ? 'selected' : '' ?>>System 7 (the golden age)</option>
-            <option value="macos8" <?= $form_data['favorite_os'] === 'macos8' ? 'selected' : '' ?>>Mac OS 8 (the Platinum era)</option>
-            <option value="macos9" <?= $form_data['favorite_os'] === 'macos9' ? 'selected' : '' ?>>Mac OS 9 (the GOAT, fight me)</option>
-            <option value="macosx" <?= $form_data['favorite_os'] === 'macosx' ? 'selected' : '' ?>>Mac OS X (Aqua baby!)</option>
-            <option value="win31" <?= $form_data['favorite_os'] === 'win31' ? 'selected' : '' ?>>Windows 3.1 (bravery)</option>
-            <option value="win95" <?= $form_data['favorite_os'] === 'win95' ? 'selected' : '' ?>>Windows 95 (Start me up!)</option>
-            <option value="win98" <?= $form_data['favorite_os'] === 'win98' ? 'selected' : '' ?>>Windows 98 (peak Windows)</option>
-            <option value="other" <?= $form_data['favorite_os'] === 'other' ? 'selected' : '' ?>>Other (please specify in message)</option>
-            <option value="all" <?= $form_data['favorite_os'] === 'all' ? 'selected' : '' ?>>I love them all equally (liar)</option>
+            <?php foreach ($favorite_os_options as $value => $label): ?>
+              <option value="<?= htmlspecialchars($value) ?>" <?= $form_data['favorite_os'] === $value ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
           </select>
         </div>
 
         <div class="form-group">
           <label for="subject">Subject</label>
           <select id="subject" name="subject">
-            <option value="" <?= $form_data['subject'] === '' ? 'selected' : '' ?>>-- Select --</option>
-            <option value="bug" <?= $form_data['subject'] === 'bug' ? 'selected' : '' ?>>Bug Report</option>
-            <option value="feature" <?= $form_data['subject'] === 'feature' ? 'selected' : '' ?>>Feature Request</option>
-            <option value="help" <?= $form_data['subject'] === 'help' ? 'selected' : '' ?>>Help / Support</option>
-            <option value="love" <?= $form_data['subject'] === 'love' ? 'selected' : '' ?>>Fan Mail / Love Letter</option>
-            <option value="vintage" <?= $form_data['subject'] === 'vintage' ? 'selected' : '' ?>>Vintage Mac Story</option>
-            <option value="other" <?= $form_data['subject'] === 'other' ? 'selected' : '' ?>>Other</option>
+            <?php foreach ($subject_options as $value => $label): ?>
+              <option value="<?= htmlspecialchars($value) ?>" <?= $form_data['subject'] === $value ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
           </select>
         </div>
 
@@ -191,6 +226,11 @@ require_once __DIR__ . '/includes/header.php';
           <textarea id="message" name="message" placeholder="Tell us everything. We have time. Our proxy server handles the requests while we read."
                     required><?= htmlspecialchars($form_data['message']) ?></textarea>
           <div class="field-hint">Pro tip: including your Mac's startup chime sound ("bong!") counts as a valid message.</div>
+        </div>
+
+        <!-- Honeypot #2: bots love ticking "subscribe" boxes. Humans never see this one. -->
+        <div class="form-group form-group-aux" aria-hidden="true">
+          <label><input type="checkbox" name="newsletter" value="1" tabindex="-1"> Subscribe to newsletter (leave unchecked)</label>
         </div>
 
         <div style="margin-top: 2rem;">

@@ -1139,6 +1139,20 @@ table.retro-table tbody tr:hover {
   font-family: var(--font-pixel);
 }
 
+/* Honeypot fields (contact.php). Visually hidden the accessible way instead
+   of display:none or left:-9999px, which spam bots recognise and skip. */
+.form-group-aux {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* --- Wayback Section --- */
 .wayback-section {
   padding: 5rem 0;
