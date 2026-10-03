@@ -25,6 +25,10 @@ set -eu
 CONFIG="${RETROGATE_DEPLOY_CONFIG:-$HOME/.config/retrogate-website/deploy.env}"
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 
+# One SSH connection shared by the path check and rsync: with password login
+# you type it once, and it stays usable for 10 minutes.
+SSH_OPTS="-o ControlMaster=auto -o ControlPath=~/.ssh/cm-%C -o ControlPersist=10m"
+
 die() { printf 'deploy: %s\n' "$*" >&2; exit 1; }
 
 install_hooks() {
@@ -58,7 +62,8 @@ deploy() {
     "$([ -n "$dry_run" ] && echo ' (dry run)')"
 
   # Never sync into the wrong directory: the target must already be the site.
-  ssh -o BatchMode=yes "$DEPLOY_USER@$DEPLOY_HOST" "test -f '$DEPLOY_PATH/index.php'" \
+  # shellcheck disable=SC2086
+  ssh $SSH_OPTS "$DEPLOY_USER@$DEPLOY_HOST" "test -f '$DEPLOY_PATH/index.php'" \
     || die "$DEPLOY_PATH/index.php not found on $DEPLOY_HOST (wrong path, or SSH login failed)"
 
   stage="$(mktemp -d)"
@@ -71,7 +76,7 @@ deploy() {
   done
 
   # shellcheck disable=SC2086
-  rsync -rlptzv --delete "$@" $dry_run "$stage/" "$target"
+  rsync -rlptzv --delete -e "ssh $SSH_OPTS" "$@" $dry_run "$stage/" "$target"
   echo "deploy: done"
 }
 
