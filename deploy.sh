@@ -14,6 +14,8 @@
 #   DEPLOY_USER=serverpilot
 #   DEPLOY_PATH=/srv/users/serverpilot/apps/retrogate/public
 #   DEPLOY_KEEP=""   # optional: extra server paths rsync must never delete
+#   DEPLOY_CHOWN=""  # optional, when deploying as root: owner for the files,
+#                    # e.g. serverpilot:serverpilot (the app's system user)
 #
 # What gets deployed: only files tracked by git at HEAD (via `git archive`),
 # minus anything marked export-ignore in .gitattributes. Uncommitted edits are
@@ -77,6 +79,11 @@ deploy() {
 
   # shellcheck disable=SC2086
   rsync -rlptzv --delete -e "ssh $SSH_OPTS" "$@" $dry_run "$stage/" "$target"
+
+  if [ -n "${DEPLOY_CHOWN:-}" ] && [ -z "$dry_run" ]; then
+    # shellcheck disable=SC2086
+    ssh $SSH_OPTS "$DEPLOY_USER@$DEPLOY_HOST" "chown -R '$DEPLOY_CHOWN' '$DEPLOY_PATH'"
+  fi
   echo "deploy: done"
 }
 
