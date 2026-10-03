@@ -69,6 +69,7 @@ deploy() {
     || die "$DEPLOY_PATH/index.php not found on $DEPLOY_HOST (wrong path, or SSH login failed)"
 
   stage="$(mktemp -d)"
+  chmod 755 "$stage"   # mktemp makes it 700; rsync copies that onto the web root
   trap 'rm -rf "$stage"' EXIT
   git -C "$REPO_ROOT" archive --format=tar HEAD | tar -x -C "$stage"
 
