@@ -16,6 +16,8 @@
 #   DEPLOY_KEEP=""   # optional: extra server paths rsync must never delete
 #   DEPLOY_CHOWN=""  # optional, when deploying as root: owner for the files,
 #                    # e.g. serverpilot:serverpilot (the app's system user)
+#   DEPLOY_SSH_KEY="" # optional: private key to log in with, e.g.
+#                    # ~/.ssh/retrogate_deploy (no passphrase = hooks run unattended)
 #
 # What gets deployed: only files tracked by git at HEAD (via `git archive`),
 # minus anything marked export-ignore in .gitattributes. Uncommitted edits are
@@ -58,6 +60,10 @@ deploy() {
   [ -n "${DEPLOY_USER:-}" ] || die "DEPLOY_USER is empty in $CONFIG"
   [ -n "${DEPLOY_PATH:-}" ] || die "DEPLOY_PATH is empty in $CONFIG"
   target="$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+  if [ -n "${DEPLOY_SSH_KEY:-}" ]; then
+    # IdentitiesOnly: don't let an SSH agent full of other keys get us locked out.
+    SSH_OPTS="$SSH_OPTS -i $DEPLOY_SSH_KEY -o IdentitiesOnly=yes"
+  fi
 
   printf 'deploy: %s -> %s%s\n' \
     "$(git -C "$REPO_ROOT" log -1 --format='%h %s' HEAD)" "$target" \
